@@ -1,0 +1,5 @@
+id=0
+clientPort=2080
+clusterPort=1888
+nodes=["0.0.0.0:1888", "localhost:2888"]
+dataDir=/Users/user/house/data-0

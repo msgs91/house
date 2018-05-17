@@ -1,0 +1,48 @@
+group 'house'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'thrift'
+apply plugin: 'java'
+apply plugin: 'scala'
+
+sourceCompatibility = 1.7
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath "ru.trylogic.gradle.plugins:gradle-thrift-plugin:0.1.1"
+    }
+}
+repositories {
+    ivy {
+        artifactPattern "http://dl.bintray.com/bsideup/thirdparty/[artifact]-[revision](-[classifier]).[ext]"
+    }
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.scala-lang:scala-library:2.11.8"
+    compile "org.scala-lang:scala-library:$SCALA_VERSION"
+    compile "org.scalaj:scalaj-http_$SCALA_VERSION_MAJOR:$SCALAJ_HTTP_VERSION"
+
+    compile "org.slf4j:slf4j-api:$SLF4J_VERSION"
+    compile "org.apache.logging.log4j:log4j-core:$LOG4J2_VERSION"
+    compile "org.apache.logging.log4j:log4j-slf4j-impl:$LOG4J2_VERSION"
+    compile "org.clapper:grizzled-slf4j_$SCALA_VERSION_MAJOR:$GRIZZLED_VERSION"
+
+    compile "joda-time:joda-time:$JODA_TIME_VERSION"
+    compile "org.joda:joda-convert:$JODA_CONVERT_VERSION"
+
+    compile "com.typesafe.akka:akka-actor_$SCALA_VERSION_MAJOR:$AKKA_VERSION"
+    compile "com.typesafe.akka:akka-slf4j_$SCALA_VERSION_MAJOR:$AKKA_VERSION"
+    testCompile "com.typesafe.akka:akka-testkit_$SCALA_VERSION_MAJOR:$AKKA_VERSION"
+
+    compile "io.spray:spray-can_$SCALA_VERSION_MAJOR:$SPRAY_VERSION"
+    compile "io.spray:spray-routing_$SCALA_VERSION_MAJOR:$SPRAY_VERSION"
+    testCompile "io.spray:spray-testkit_$SCALA_VERSION_MAJOR:$SPRAY_VERSION"
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="warn" monitorInterval="30">
+    <Properties>
+        <Property name="log-path">/Users/user/workspace/logs/house</Property>
+        <Property name="component">node0</Property>
+        <Property name="error-file">node0-error</Property>
+    </Properties>
+    <Appenders>
+        <RollingFile name="file-log" fileName="${log-path}/${component}.log"
+                     filePattern="${log-path}/${component}-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%-5level] %c{1} - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${log-path}" maxDepth="1">
+                    <IfFileName glob="${component}-*.log" />
+                    <IfLastModified age="7D" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <RollingFile name="error-log" fileName="${log-path}/${error-file}.log"
+                     filePattern="${log-path}/${error-file}-%d{yyyy-MM-dd}.log">
+            <PatternLayout>
+                <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] - %msg%n</pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+            <DefaultRolloverStrategy>
+                <Delete basePath="${log-path}" maxDepth="1">
+                    <IfFileName glob="${error-file}-*.log" />
+                    <IfLastModified age="7D" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
+        <Console name="console" target="SYSTEM_OUT">
+            <filters>
+                <!--<ThresholdFilter level="INFO"/>-->
+            </filters>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%-5level] %c{1} - %msg%n"/>
+        </Console>
+    </Appenders>
+    <Loggers>
+        <Logger name="house.network" level="debug">
+        </Logger>
+        <Logger name="Error" level="debug" additivity="false">
+            <appender-ref ref="error-log" />
+        </Logger>
+        <Root level="debug">
+            <appender-ref ref="console"/>
+            <appender-ref ref="file-log"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_main.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_main.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/client/client_test.iml" filepath="$PROJECT_DIR$/.idea/modules/client/client_test.iml" group="client" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common_main.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common_main.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/common/common_test.iml" filepath="$PROJECT_DIR$/.idea/modules/common/common_test.iml" group="common" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/general/general.iml" filepath="$PROJECT_DIR$/.idea/modules/general/general.iml" group="general" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/general/general_main.iml" filepath="$PROJECT_DIR$/.idea/modules/general/general_main.iml" group="general" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/general/general_test.iml" filepath="$PROJECT_DIR$/.idea/modules/general/general_test.iml" group="general" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/graph/graph.iml" filepath="$PROJECT_DIR$/.idea/modules/graph/graph.iml" group="graph" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/graph/graph_main.iml" filepath="$PROJECT_DIR$/.idea/modules/graph/graph_main.iml" group="graph" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/graph/graph_test.iml" filepath="$PROJECT_DIR$/.idea/modules/graph/graph_test.iml" group="graph" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/house.iml" filepath="$PROJECT_DIR$/.idea/modules/house.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/server.iml" filepath="$PROJECT_DIR$/.idea/modules/server/server.iml" group="server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/server_main.iml" filepath="$PROJECT_DIR$/.idea/modules/server/server_main.iml" group="server" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/server/server_test.iml" filepath="$PROJECT_DIR$/.idea/modules/server/server_test.iml" group="server" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.scala-lang.modules:scala-async_2.11:0.9.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-async_2.11/0.9.1/a095d208624d2a95e37e09037aeb77fd6acec4aa/scala-async_2.11-0.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.scala-lang.modules/scala-async_2.11/0.9.1/66a4eac838c5e00ac09979d83d6e182b6d2939bb/scala-async_2.11-0.9.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
